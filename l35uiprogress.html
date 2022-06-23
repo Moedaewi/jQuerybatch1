@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UI Progress Method</title>
+    <link href="./libs/jquery-ui-1.13.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>HTML</h1>
+        <div id="progress1"></div>
+
+        <h1>CSS</h1>
+        <div id="progress2"></div>
+
+        <h1>JQUERY</h1>
+        <div id="progress3"></div>
+
+        <h1>JAVASCRIPT</h1>
+        <div id="progress4"></div>
+
+        <h1>BOOTSTRAP</h1>
+        <div id="progress5"></div>
+    </div>
+
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script src="./libs/jquery-ui-1.13.1/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#progress1").progressbar({
+                value: 50
+            }).css("background-color", "red");
+
+            $("#progress1 > div").css("background-color", "green");
+
+            $("#progress2").progressbar({
+                value: 70
+            }).css({
+                height: "20px",
+                "background-color": "skyblue",
+            });
+            $("#progress2 > div").css("background-color", "violet");
+
+            $("#progress3").progressbar({
+                value: 60,
+            }).css("background", "none");
+
+
+            $("#progress4").progressbar({
+                value: 34
+            });
+
+            $("#progress4 > div").css("background", "orange")
+
+
+            $("#progress5").progressbar({
+                value: 80
+            }).css({
+                "background": "url('img/education.jfif')",
+                "background-repeat": "repeat-x",
+                "background-position": "center",
+                "background-size": "100px",
+            });
+
+            $("#progress5 > div").css({
+                "background-color": "#055",
+            })
+
+        });
+
+    </script>
+</body>
+
+</html>
